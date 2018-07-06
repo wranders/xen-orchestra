@@ -6,6 +6,7 @@
 
 - [Legacy Backup] Restore and File restore functionalities moved to the Backup NG view [#3499](https://github.com/vatesfr/xen-orchestra/issues/3499) (PR [#3610](https://github.com/vatesfr/xen-orchestra/pull/3610))
 - [Backup NG logs] Display warning in case of missing VMs instead of a ghosts VMs tasks (PR [#3647](https://github.com/vatesfr/xen-orchestra/pull/3647))
+- Web hooks plugin [#1946](https://github.com/vatesfr/xen-orchestra/issues/1946)
 
 ### Bug fixes
 
@@ -16,6 +17,7 @@
 
 ### Released packages
 
+- xo-server-hooks: 0.1.0
 - xo-server v5.30.0
 - xo-web v5.30.0
 
