@@ -38,10 +38,7 @@ export default async function readVmdkGrainTable (fileAccessor) {
   if (
     new Int8Array(grainAddrBuffer).reduce((acc, val) => acc && val === -1, true)
   ) {
-    headerBuffer = await fileAccessor(
-      FOOTER_POSITION,
-      FOOTER_POSITION + HEADER_SIZE
-    )
+    headerBuffer = await fileAccessor(FOOTER_POSITION, FOOTER_POSITION + HEADER_SIZE)
     grainAddrBuffer = headerBuffer.slice(
       GRAIN_ADDRESS_OFFSET,
       GRAIN_ADDRESS_OFFSET + 8
@@ -54,11 +51,7 @@ export default async function readVmdkGrainTable (fileAccessor) {
   const grainSize =
     getLongLong(headerBuffer, GRAIN_SIZE_OFFSET, 'grain size') * SECTOR_SIZE
   const grainCount = Math.ceil(capacity / grainSize)
-  const numGTEsPerGT = getLongLong(
-    headerBuffer,
-    NUM_GTE_PER_GT_OFFSET,
-    'num GTE per GT'
-  )
+  const numGTEsPerGT = new DataView(headerBuffer).getUint32(NUM_GTE_PER_GT_OFFSET, true)
   const grainTablePhysicalSize = numGTEsPerGT * 4
   const grainDirectoryEntries = Math.ceil(grainCount / numGTEsPerGT)
   const grainDirectoryPhysicalSize = grainDirectoryEntries * 4
