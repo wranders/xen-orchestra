@@ -8,8 +8,11 @@
 
 ### Bug fixes
 
+- [OVA import] allow import of big files
+
 ### Released packages
 
+- xo-vmdk-to-vhd v0.1.6
 - xen-api v0.20.0
 - xo-server-usage-report v0.7.0
 - xo-server v5.29.0
