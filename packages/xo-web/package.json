@@ -138,8 +138,8 @@
     "xo-acl-resolver": "^0.3.0",
     "xo-common": "^0.1.2",
     "xo-lib": "^0.8.0",
-    "xo-remote-parser": "^0.5.0",
-    "xo-vmdk-to-vhd": "^0.1.5"
+    "xo-ova": "^0.1.5",
+    "xo-remote-parser": "^0.5.0"
   },
   "scripts": {
     "build": "NODE_ENV=production gulp build",

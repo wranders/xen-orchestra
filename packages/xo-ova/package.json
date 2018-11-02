@@ -1,13 +1,13 @@
 {
-  "name": "xo-vmdk-to-vhd",
+  "name": "xo-ova",
   "version": "0.1.5",
   "license": "AGPL-3.0",
-  "description": "JS lib streaming a vmdk file to a vhd",
+  "description": "JS lib for importing ova files",
   "keywords": [
     "vhd",
     "vmdk"
   ],
-  "homepage": "https://github.com/vatesfr/xen-orchestra/tree/master/packages/xo-vmdk-to-vhd",
+  "homepage": "https://github.com/vatesfr/xen-orchestra/tree/master/packages/xo-ova",
   "bugs": "https://github.com/vatesfr/xen-orchestra/issues",
   "repository": {
     "type": "git",
