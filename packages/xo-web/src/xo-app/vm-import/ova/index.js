@@ -3,7 +3,7 @@ import { parseOVAFile } from 'xo-ova'
 
 // ===================================================================
 
-/* global FileReader */
+/* global FileReader, TextDecoder */
 
 class BrowserParsableFile {
   constructor (file) {
@@ -27,9 +27,8 @@ class BrowserParsableFile {
 export default async function parse (file) {
   try {
     const browserParsableFile = new BrowserParsableFile(file)
-    const result = await parseOVAFile(browserParsableFile)
-    console.log('result', result)
-    return result
+    const decoder = (array, encoding) => new TextDecoder(encoding).decode(array)
+    return await parseOVAFile(browserParsableFile, decoder)
   } catch (e) {
     console.log(e)
     throw e
