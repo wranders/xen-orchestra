@@ -3,6 +3,7 @@
 ## *next*
 
 ### Enhancements
+- [Import] remove support for host in vm.import
 
 - [Legacy Backup] Restore and File restore functionalities moved to the Backup NG view [#3499](https://github.com/vatesfr/xen-orchestra/issues/3499) (PR [#3610](https://github.com/vatesfr/xen-orchestra/pull/3610))
 - [Backup NG logs] Display warning in case of missing VMs instead of a ghosts VMs tasks (PR [#3647](https://github.com/vatesfr/xen-orchestra/pull/3647))
@@ -32,6 +33,7 @@
 - xo-server v5.30.0
 - xo-web v5.30.0
 - xo-ova v0.2.0 (renamed from xo-vmdk-to-vhd)
+- xo-upload-ova v0.1.0
 
 ## **5.28.1** (2018-11-05)
 
