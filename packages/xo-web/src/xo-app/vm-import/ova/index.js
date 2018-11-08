@@ -7,17 +7,14 @@ import { parseOVAFile } from 'xo-ova'
 
 class BrowserParsableFile {
   constructor (file) {
-    console.log('constructor')
     this._file = file
   }
 
   slice (start, end) {
-    console.log('slice', start, end)
     return new BrowserParsableFile(this._file.slice(start, end))
   }
 
   async read () {
-    console.log('read')
     const reader = new FileReader()
     reader.readAsArrayBuffer(this._file)
     return (await fromEvent(reader, 'loadend')).target.result
