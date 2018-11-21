@@ -16,7 +16,7 @@ export default class XoSmb extends LocalHandler {
   }
 
   get type () {
-    return 'smb'
+    return 'xoSmb'
   }
 
   _getRealPath () {
