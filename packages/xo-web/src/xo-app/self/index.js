@@ -38,6 +38,7 @@ import {
 
 import {
   addSubscriptions,
+  adminOnly,
   connectStore,
   resolveIds,
   resolveResourceSets,
@@ -701,6 +702,7 @@ class ResourceSet extends Component {
 
 const compareName = (a, b) => (a.name < b.name ? -1 : 1)
 
+@adminOnly
 export default class Self extends Component {
   constructor (props) {
     super(props)

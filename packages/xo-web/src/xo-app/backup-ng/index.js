@@ -13,7 +13,7 @@ import { Container, Row, Col } from 'grid'
 import { get } from '@xen-orchestra/defined'
 import { isEmpty, map, groupBy, some } from 'lodash'
 import { NavLink, NavTabs } from 'nav'
-import { routes } from 'utils'
+import { adminOnly, routes } from 'utils'
 import {
   cancelJob,
   deleteBackupNgJobs,
@@ -293,8 +293,10 @@ export default routes('overview', {
   restore: Restore,
   'file-restore': FileRestore,
   health: Health,
-})(({ children }) => (
-  <Page header={HEADER} title='backupPage' formatTitle>
-    {children}
-  </Page>
-))
+})(
+  adminOnly(({ children }) => (
+    <Page header={HEADER} title='backupPage' formatTitle>
+      {children}
+    </Page>
+  ))
+)

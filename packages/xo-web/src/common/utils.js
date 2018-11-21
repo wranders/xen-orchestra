@@ -29,7 +29,7 @@ import _ from './intl'
 import * as actions from './store/actions'
 import invoke from './invoke'
 import store from './store'
-import { getObject } from './selectors'
+import { getObject, isAdmin } from './selectors'
 import { satisfies as versionSatisfies } from 'semver'
 
 export const EMPTY_ARRAY = Object.freeze([])
@@ -593,3 +593,10 @@ export const generateRandomId = () =>
   Math.random()
     .toString(36)
     .slice(2)
+
+export const adminOnly = Component =>
+  connectStore({
+    isAdmin,
+  })(({ isAdmin, ...props }) =>
+    isAdmin ? <Component {...props} /> : <_NotFound />
+  )
