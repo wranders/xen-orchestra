@@ -9,8 +9,11 @@
 
 ### Bug fixes
 
+- [Home/SRs] Fixed SR status for non admin users [#2204](https://github.com/vatesfr/xen-orchestra/issues/2204)
+
 ### Released packages
 
+- xo-acl-resolver v0.4.1
 - xen-api v0.22.0
 - xo-server-perf-alert v0.2.0
 - xo-server-usage-report v0.7.1
