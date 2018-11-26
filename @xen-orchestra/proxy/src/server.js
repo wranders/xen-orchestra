@@ -47,7 +47,9 @@ ${name} v${version}
     ignoreUnknownFormats: true,
   })
 
-  let httpServer = new (require('http-server-plus'))()
+  let httpServer = new (require('http-server-plus'))({
+    createSecureServer: require('http2').createSecureServer,
+  })
 
   const readFile = require('promise-toolbox/promisify')(require('fs').readFile)
   await require('@xen-orchestra/async-map').default(
