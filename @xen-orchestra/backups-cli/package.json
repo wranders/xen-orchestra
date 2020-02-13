@@ -1,9 +1,11 @@
 {
+  "private": false,
   "bin": {
     "xo-backups": "index.js"
   },
   "bugs": "https://github.com/vatesfr/xen-orchestra/issues",
   "dependencies": {
+    "@xen-orchestra/backups": "^0.1.1",
     "@xen-orchestra/fs": "^0.10.2",
     "filenamify": "^4.1.0",
     "getopts": "^2.2.5",
